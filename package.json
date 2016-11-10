@@ -6,6 +6,7 @@
   "homepage": "http://popmotion.io",
   "main": "./lib/popmotion.js",
   "files": [
+    "dist",
     "lib",
     "src",
     "popmotion.global.js",
@@ -43,8 +44,7 @@
     "compile": "eslint src && babel src --out-dir lib && NODE_ENV=production webpack && npm run measure",
     "watch": "NODE_ENV=development webpack --progress --colors --watch",
     "measure": "gzip -c dist/popmotion.global.min.js | wc -c",
-    "test": "mocha --compilers js:babel-register",
-    "postinstall": "babel src --out-dir lib && NODE_ENV=production webpack"
+    "test": "mocha --compilers js:babel-register"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
