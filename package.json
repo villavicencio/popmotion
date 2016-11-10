@@ -7,6 +7,7 @@
   "main": "./lib/popmotion.js",
   "files": [
     "lib",
+    "src",
     "popmotion.global.js",
     "popmotion.global.min.js"
   ],
