@@ -44,7 +44,7 @@
     "watch": "NODE_ENV=development webpack --progress --colors --watch",
     "measure": "gzip -c dist/popmotion.global.min.js | wc -c",
     "test": "mocha --compilers js:babel-register",
-    "postinstall": "postinstall-build lib \"npm run compile\""
+    "postinstall": "postinstall-build lib \"babel src --out-dir lib && NODE_ENV=production webpack\""
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
