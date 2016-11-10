@@ -42,9 +42,11 @@
     "compile": "eslint src && babel src --out-dir lib && NODE_ENV=production webpack && npm run measure",
     "watch": "NODE_ENV=development webpack --progress --colors --watch",
     "measure": "gzip -c dist/popmotion.global.min.js | wc -c",
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "postinstall": "postinstall-build lib \"npm run compile\""
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.0.20",
     "babel-eslint": "^5.0.4",
     "babel-loader": "^6.0.1",
@@ -56,5 +58,8 @@
     "chai": "^3.4.0",
     "eslint": "^1.10.3",
     "webpack": "1.7.2"
+  },
+  "dependencies": {
+    "postinstall-build": "^2.1.3"
   }
 }
